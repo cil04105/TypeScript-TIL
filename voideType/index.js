@@ -12,7 +12,12 @@
 //   return a + 2;
 // };
 // 함수();
-var myName = function (a) {
-  console.log(a);
-};
-console.log(myName(3));
+// <문제1>
+// const myName = (a?: string): void => {
+//   if(a){
+//     console.log('my name' + a)
+//   }else{
+//     console.log('이름 없음')
+//   }
+// };
+// myName('홍길동');
