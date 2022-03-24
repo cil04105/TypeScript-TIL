@@ -1,8 +1,9 @@
-// //타입을 미리 정하기 애매할때 (unionType, any, unknown)
-// let aaa: number | string | boolean = 123; //union_2개 이상 합친 타입
+// xx 또는 XX이 들어올 수 있다
+//타입을 미리 정하기 애매할때 (unionType, any, unknown)
+// let : number | string | boolean = 123; //union_2개 이상 합친 타입
 
-// let member: (string | number)[] = [1, "2", 3]; //여러 타입 지정하기
-// let obj: { a: string | number } = { a: 123 };
+// let member: (string | number)[] = [1, "2", 3]; //어레이 여러 타입 지정하기
+// let obj: { a: string | number } = { a: 123 }; //객체
 
 // //any type_모든 타입이 들어 갈 수 있다
 // let random: any; // 편하다고 막쓰면 안됨_타입스크립트 쓰는 의미가 없음, 버그도 안잡아줌...(타입해제)
@@ -26,3 +27,8 @@
 // };
 // 학교.score[4] = false;
 // 학교.friend = ["Lee", 학교.teacher];
+
+//연습
+let myAge: string | number; //union type 에는 연산 불가능함
+// let myAge: unknown;
+myAge + 1;
