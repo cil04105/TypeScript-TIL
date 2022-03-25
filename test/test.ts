@@ -1,18 +1,38 @@
-let myName = "Yu";
+//void는 실수로 리턴하는거 막아줌
+//? = number|undefined
+//유니온 타입은 연산 불가능, 타입 확실히 지정
+// function hamsu(x?: number | string): void {
+//   if(x:number)
+//   console.log(x + 3);
+// }
+// hamsu(2);
 
-let age = 25;
+function hello(nam: string): void {
+  if (nam) {
+    console.log("hi" + nam);
+  } else {
+    console.log("누구?");
+  }
+}
+hello("Park");
 
-let bool = true;
+function num123(x: string | number): number {
+  return x.toString.length;
+}
+num123("2222");
 
-let str: string[] = ["a", "b", "c", "d"];
-
-let user: { member: string; member2: string } = {
-  member: "kim",
-  member2: "Lee",
-};
-
-let project1: { member: string[]; days: number; started: true } = {
-  member: ["kim", "park"],
-  days: 30,
-  started: true,
-};
+function marry(money: number, house: boolean, charm: string) {
+  let score: number = 0;
+  score += money;
+  if (house === true) {
+    score += 500;
+  }
+  if (charm === "상") {
+    score += 100;
+  }
+  if (score >= 600) {
+    return "gogogogo";
+  } else {
+    return "gg";
+  }
+}

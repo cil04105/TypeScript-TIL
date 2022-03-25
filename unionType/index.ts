@@ -15,20 +15,21 @@
 // let random2: unknown = 1; //any와 같은 기능(조금 더 안전함) _
 // random2 - 2; //숫자는 숫자 타입이여야 연산 가능함
 
-// // <문제>
-// let 학교: {
-//   score: (boolean | number)[];
-//   teacher: string;
-//   friend: string | string[];
-// } = {
-//   score: [100, 97, 84],
-//   teacher: "Phil",
-//   friend: "John",
-// };
-// 학교.score[4] = false;
-// 학교.friend = ["Lee", 학교.teacher];
-
 //연습
-let myAge: string | number; //union type 에는 연산 불가능함
-// let myAge: unknown;
-myAge + 1;
+let user1: string = "kim";
+let age2: number = undefined;
+let married: boolean = false;
+let park = [user1, age2, married];
+
+let student: {
+  score: (number | boolean)[];
+  teacher: string;
+  friend: string | string[];
+} = {
+  score: [100, 97, 84],
+  teacher: "Phil",
+  friend: "Lee",
+};
+
+student.score[4] = false;
+student.friend = ["Kim", student.teacher];
